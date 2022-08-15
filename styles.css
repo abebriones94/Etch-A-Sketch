@@ -1,45 +1,192 @@
 .flex-container {
-    height: 100vh; 
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background:rgba(161, 40, 40, 0.493);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(rgba(161, 40, 40, 0.493), rgb(127, 134, 168));
 }
 
 .board {
   width: 80%;
   height: 80%;
   display: grid;
-  background-color: white; 
-  
-  box-shadow: inset -3em 3em rgb(19, 2, 2), rgba(239, 236, 236, 0.7), 0.3em 0.3em, 1em rgb(19, 2, 2);
   border-radius: 4px;
-  border-style:solid;
+  border-style: solid;
   border-color: rgba(225, 9, 9, 0.774);
   border-width: 20px;
-
 }
 
 .board:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 300px;
-    min-height: 300px;
-    width: 200vh;
-    height: 200vh;
-    max-width: 600px;
-    max-height: 600px;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  min-height: 300px;
+  width: 180vw;
+  height: 180vw;
+  max-width: 600px;
+  max-height: 600px;
 }
 
 .title {
-    font-family: 'Sacramento', sans-serif, cursive;
-    font-size: 1.6em;
-                                                
+  font-family: "Sacramento", sans-serif, cursive;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  padding: 15px;
+  margin: 15px;
+  border-radius: 2em;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.blackButton {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 13px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.blackButton:hover {
+  background-color: rgb(67, 61, 61);
+  color: rgb(202, 194, 194);
+}
+
+.eraserButton {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 13px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.grayButton {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 13px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.grayButton:hover {
+  background-color: gray;
+  color: white;
+}
+
+.psychedelicButton {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 13px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.psychedelicButton:hover {
+  background-image: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+
+  color: black;
+}
+
+.resetButton {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 13px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+input {
+  padding: 5px 5px;
+  border: unset;
+  border-radius: 5px;
+  z-index: 1;
+  background: #e8e8e8;
+  margin-top: 20px;
+  font-size: 12px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.mode {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+.setSize {
+  padding: 10px 10px;
+  border: unset;
+  border-radius: 10px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+
+  font-size: 12px;
 }
