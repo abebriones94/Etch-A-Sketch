@@ -32,7 +32,7 @@ function changeSize(input) {
 function colorSquare() {
   // Referring to whatever square we are calling that function with
   if (click) {
-    if (color === "random") {
+    if (color === "psychedelic") {
       this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`; // Found on Stack Overflow
     } else {
       this.style.backgroundColor = color;
@@ -47,16 +47,16 @@ function changeColor(choice) {
 function resetBoard() {
   let board = document.querySelector(".board");
   let squares = board.querySelectorAll("div");
-  squares.forEach((div) => (div.style.backgroundColor = "white"));
+  squares.forEach((div) => (div.style.backgroundColor = "white")); // Making each square white after reset
 }
 
 document.querySelector("body").addEventListener("click", (e) => {
   if (e.target.tagName != "BUTTON") {
     click = !click;
     if (click) {
-      document.querySelector(".mode").textContent = "Mode: Coloring";
+      document.querySelector(".mode").textContent = "Sketching your masterpiece";
     } else {
-      document.querySelector(".mode").textContent = "Mode: Not Coloring";
+      document.querySelector(".mode").textContent = "Break time!";
     }
   }
 });
